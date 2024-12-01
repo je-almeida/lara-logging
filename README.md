@@ -18,19 +18,31 @@ LaraLogger is a Laravel package that provides a custom logging solution to store
 composer require jeff/lara-logger
 ```
 
-2. Run the Publish command:
+2. Add `Jeff\LaraLogger\Providers\LoggingServiceProvider::class` to providers list (/bootstrap/providers.php):
+
+```bash
+<?php
+
+return [
+    ...,
+    Jeff\LaraLogger\Providers\LoggingServiceProvider::class,
+];
+
+```
+
+3. Run the Publish command (optional):
 
 ```bash
 php artisan vendor:publish --provider="Jeff\LaraLogger\Providers\LoggingServiceProvider"
 ```
 
-3. Run the migrations to create the logs table:
+4. Run the migrations to create the logs table:
 
 ```bash
 php artisan migrate
 ```
 
-4. Add the following logging-related environment variables to your .env file if needed:
+5. Add the following logging-related environment variables to your .env file if needed:
 
 ```bash
 LOG_CHANNEL=database
