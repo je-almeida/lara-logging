@@ -14,5 +14,8 @@
       "email": "jeff.ifsp@gmail.com"
     }
   ],
-  "require": {}
+  "require": {
+    "php": "^8.2",
+    "laravel/framework": "^11.31"
+  }
 }
